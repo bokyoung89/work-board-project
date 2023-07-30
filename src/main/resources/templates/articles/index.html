@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>게시판 페이지</title>
 </head>
+
 <body>
 
-    <header>
-        header 삽입부
-        <hr>
-    </header>
+    <header th:replace="header :: header"></header>
 
     <main>
         <form>
@@ -33,7 +31,7 @@
                     <th>해시태그</th>
                     <th>작성자</th>
                     <th>작성일</th>
- 일              </tr>
+               </tr>
             </thead>
             <tbody>
                 <tr>
@@ -77,10 +75,6 @@
         </nav>
     </main>
 
-    <footer>
-        <hr>
-        footer 삽입부
-
-    </footer>
+    <footer th:replace="footer :: footer"></footer>
 </body>
 </html>
