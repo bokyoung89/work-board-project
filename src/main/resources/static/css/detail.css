@@ -132,8 +132,11 @@ body{
 .attachment-block .attachment-text {
     color: #555;
 }
+#hashtag {
+    padding : 10px;
+}
 
-.tag-cloud a {
+#hashtag a {
     padding: 4px 15px;
     font-size: 10px;
     color: #000;
@@ -143,7 +146,7 @@ body{
     border: 1px solid #ced4da;
     text-decoration: none;
 }
-.tag-cloud a:hover {
+#hashtag a:hover {
     background: #dee2e6;
 }
 
@@ -244,7 +247,7 @@ body{
 }
 
 .btn-group> .btn-like {
-    margin-top: 20px;
+    margin: 10px;
 }
 
 .mar-top {
