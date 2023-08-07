@@ -14,7 +14,10 @@
 </head>
 
 <body>
-    <header id="header"></header>
+    <header id="header">
+        헤더 삽입부
+        <hr>
+    </header>
 
     <main class="container">
         <div class="row">
@@ -39,20 +42,20 @@
                     </div>
                 </div>
 
-                <div class="clearfix mt-40">
+                <div class="clearfix mt-40" id="article-table">
                     <ul class="xsearch-items">
                         <li class="search-item">
                             <div class="search-item-content">
-                                <h3 class="search-item-caption"><a href="#">도와주세요~</a></h3>
+                                <h3 class="title search-item-caption"><a href="#">도와주세요~</a></h3>
                                 <div class="search-item-meta mb-15">
                                     <ul class="list-inline">
-                                        <li class="list-item">홍길동</li>
+                                        <li class="user-id list-item">홍길동</li>
                                         <li class="list-item">|</li>
-                                        <li class="list-item"> 2020년 9월 2일</li>
+                                        <li class="created-at list-item"><time>2020년 9월 2일</time></li>
                                     </ul>
                                 </div>
                                 <br />
-                                <div>
+                                <div class="content">
                                     Illustration by Julian Burford. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam massa quis mauris sollicitudin commodo venenatis ligula commodo. Sed blandit convallis dignissim. Pellentesque pharetra velit eu velit elementum et convallis erat vulputate.
                                 </div>
                                 <div class="search-item-meta mb-15">
@@ -424,7 +427,10 @@
             </ul>
         </nav>
 
-    <footer id="footer"></footer>
+    <footer id="footer">
+        푸터 삽입부
+        <hr>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

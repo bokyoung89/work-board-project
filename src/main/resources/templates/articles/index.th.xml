@@ -2,4 +2,16 @@
 <thlogic>
     <attr sel="#header" th:replace="header :: header"/>
     <attr sel="#footer" th:replace="footer :: footer"/>
+
+    <attr sel="#article-table">
+        <attr sel=".xsearch-items" th:remove="all-but-first">
+            <attr sel=".search-item[0]" th:each="article : ${articles}">
+                <attr sel=".title/a" th:text="${article.title}" th:href="@{'/articles/' + ${article.id}}" />
+                <attr sel=".hashtag" th:text="${article.hashtag}" />
+                <attr sel=".user-id" th:text="${article.nickname}" />
+                <attr sel=".content" th:text="${article.content}" />
+                <attr sel=".created-at/time" th:datetime="${article.createdAt}" th:text="${#temporals.format(article.createdAt, 'yyyy-MM-dd')}" />
+            </attr>
+        </attr>
+    </attr>
 </thlogic>
