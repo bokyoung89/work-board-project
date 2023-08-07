@@ -9,12 +9,9 @@ body{
     position: relative;
     border-radius: 3px;
     background: #ffffff;
-    border-top: 3px solid #d2d6de;
     margin-bottom: 20px;
-    width: 100%;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1);
     margin-left: 90px;
-    margin-top: 40px;
 }
 .box-header.with-border {
     border-bottom: 1px solid #f4f4f4;
@@ -132,10 +129,13 @@ body{
 .attachment-block .attachment-text {
     color: #555;
 }
+#hashtag {
+    padding : 10px;
+}
 
-.tag-cloud a {
+#hashtag a {
     padding: 4px 15px;
-    font-size: 10px;
+    font-size: 12px;
     color: #000;
     border-radius: 50px;
     margin-right: 4px;
@@ -143,7 +143,7 @@ body{
     border: 1px solid #ced4da;
     text-decoration: none;
 }
-.tag-cloud a:hover {
+#hashtag a:hover {
     background: #dee2e6;
 }
 
@@ -244,7 +244,7 @@ body{
 }
 
 .btn-group> .btn-like {
-    margin-top: 20px;
+    margin: 10px;
 }
 
 .mar-top {

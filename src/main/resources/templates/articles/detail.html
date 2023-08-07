@@ -14,134 +14,133 @@
 
 <body>
 
-    <header id="header"></header>
+    <header id="header">
+        <hr>
+        헤더 삽입부
+    </header>
 
     <div class="container bootstrap snippets bootdey">
-        <div class="col-md-8">
+        <div class="col-md-8" id="article-main">
             <div class="box box-widget">
                 <div class="box-header with-border">
                     <div class="title-block">
-                        <span class="title">감자전 어떻게 만드나요?</a></span>
+                        <span class="title" id="title">감자전 어떻게 만드나요?</a></span>
                     </div>
                     <div class="title-block sub">
-                        <span class="createdBy">홍길동</span>
-                        <span class="createdAt">7:30 PM Today</span>
+                        <span class="createdBy" id="nickname">홍길동</span>
+                        <span class="createdAt"><time id="created-at">7:30 PM Today</time></span>
                         <span class="hits">조회수 24</span>
                     </div>
                 </div>
-                <div class="box-body">
+                <div class="box-body" id="article-content">
                     <p>감자전 만들고 싶은데 어떻게 하면 맛있게 하나요??
                         요리 순서랑 재료까지 알고 싶어요~</p>
-                    <div class="tag-cloud">
-                        <a href="#">#김치전</a>
-                        <a href="#">#김치전</a>
-                        <a href="#">#김치전</a>
-                        <a href="#">#김치전</a>
-                        <a href="#">#김치전</a>
-                        <a href="#">#김치전</a>
-                        <a href="#">#김치전</a>
-                    </div>
-                        <div class="btn-group">
-                            <a class="btn btn-sm btn-default btn-hover-success btn-like" href="#"><i class="fa fa-thumbs-up"></i> 45</a>
-                        </div>
+                </div>
+                <div class="tag-cloud" id="hashtag">
+                    <a href="#">#김치전</a>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-sm btn-default btn-hover-success btn-like" href="#"><i class="fa fa-thumbs-up"></i> 45</a>
                 </div>
                 <div class="panel">
                     <div class="panel-body">
                         <textarea class="form-control" rows="2" placeholder="답변을 달아주세요."></textarea>
                         <div class="mar-top clearfix">
-                            <button class="btn btn-sm btn-primary pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
+                            <button class="btn btn-sm btn-primary pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> 쓰기</button>
                             <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
                             <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
                             <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a>
                         </div>
                     </div>
                 </div>
-                <div class="panel">
-                    <div class="panel-body">
-                        <!-- Newsfeed Content -->
-                        <!--===================================================-->
-                        <div class="media-block">
-                            <div class="media-body">
-                                <div class="mar-btm">
-                                    <a href="#" class="btn-link text-semibold media-heading box-inline">Lisa D.</a>
-                                    <p class="text-muted text-sm"> 11 min ago</p>
-                                </div>
-                                <p>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                                <div class="pad-ver">
-                                    <div class="btn-group">
-                                        <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i> 45</a>
+                <div id="article-comments">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <!-- Newsfeed Content -->
+                            <!--===================================================-->
+                            <div class="media-block">
+                                <div class="media-body">
+                                    <div class="mar-btm">
+                                        <a href="#" class="btn-link text-semibold media-heading box-inline">Lisa D.</a>
+                                        <p class="text-muted text-sm"><time>11 min ago</time></p>
                                     </div>
-                                    <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
-                                </div>
-                                <hr>
-
-                                <!-- Comments -->
-                                <div>
-                                    <div class="media-block">
-                                        <a class="media-left img-circle img-sm" href="#"></a>
-                                        <div class="media-body">
-                                            <div class="mar-btm">
-                                                <a href="#" class="btn-link text-semibold media-heading box-inline">Bobby Marz</a>
-                                                <p class="text-muted text-sm"> 7 min ago</p>
-                                            </div>
-                                            <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                                            <div class="pad-ver">
-                                                <div class="btn-group">
-                                                    <a class="btn btn-sm btn-default btn-hover-success active" href="#"><i class="fa fa-thumbs-up"></i> 45</a>
-                                                </div>
-                                            </div>
-                                            <hr>
+                                    <p class="article-comment">consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                                    <div class="pad-ver">
+                                        <div class="btn-group">
+                                            <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i> 45</a>
                                         </div>
+                                        <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
                                     </div>
+                                    <hr>
+
+<!--                                    &lt;!&ndash; Comments &ndash;&gt;-->
+<!--                                    <div>-->
+<!--                                        <div class="media-block">-->
+<!--                                            <a class="media-left img-circle img-sm" href="#"></a>-->
+<!--                                            <div class="media-body">-->
+<!--                                                <div class="mar-btm">-->
+<!--                                                    <a href="#" class="btn-link text-semibold media-heading box-inline">Bobby Marz</a>-->
+<!--                                                    <p class="text-muted text-sm"> 7 min ago</p>-->
+<!--                                                </div>-->
+<!--                                                <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>-->
+<!--                                                <div class="pad-ver">-->
+<!--                                                    <div class="btn-group">-->
+<!--                                                        <a class="btn btn-sm btn-default btn-hover-success active" href="#"><i class="fa fa-thumbs-up"></i> 45</a>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <hr>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                 </div>
                             </div>
+                            <!--===================================================-->
+                            <!-- End Newsfeed Content -->
                         </div>
-                        <!--===================================================-->
-                        <!-- End Newsfeed Content -->
                     </div>
-                </div>
-                <div class="panel">
-                    <div class="panel-body">
-                        <!-- Newsfeed Content -->
-                        <!--===================================================-->
-                        <div class="media-block">
-                            <div class="media-body">
-                                <div class="mar-btm">
-                                    <a href="#" class="btn-link text-semibold media-heading box-inline">Lisa D.</a>
-                                    <p class="text-muted text-sm"> 11 min ago</p>
-                                </div>
-                                <p>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                                <div class="pad-ver">
-                                    <div class="btn-group">
-                                        <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i> 45</a>
+                    <div class="panel">
+                        <div class="panel-body">
+                            <!-- Newsfeed Content -->
+                            <!--===================================================-->
+                            <div class="media-block">
+                                <div class="media-body">
+                                    <div class="mar-btm">
+                                        <a href="#" class="btn-link text-semibold media-heading box-inline">Lisa D.</a>
+                                        <p class="text-muted text-sm"> 11 min ago</p>
                                     </div>
-                                    <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
-                                </div>
-                                <hr>
-
-                                <!-- Comments -->
-                                <div>
-                                    <div class="media-block">
-                                        <a class="media-left img-circle img-sm" href="#"></a>
-                                        <div class="media-body">
-                                            <div class="mar-btm">
-                                                <a href="#" class="btn-link text-semibold media-heading box-inline">Bobby Marz</a>
-                                                <p class="text-muted text-sm"> 7 min ago</p>
-                                            </div>
-                                            <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                                            <div class="pad-ver">
-                                                <div class="btn-group">
-                                                    <a class="btn btn-sm btn-default btn-hover-success active" href="#"><i class="fa fa-thumbs-up"></i> 45</a>
-                                                </div>
-                                            </div>
-                                            <hr>
+                                    <p>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                                    <div class="pad-ver">
+                                        <div class="btn-group">
+                                            <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i> 45</a>
                                         </div>
+                                        <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
                                     </div>
+                                    <hr>
+
+                                    <!-- Comments -->
+<!--                                    <div>-->
+<!--                                        <div class="media-block">-->
+<!--                                            <a class="media-left img-circle img-sm" href="#"></a>-->
+<!--                                            <div class="media-body">-->
+<!--                                                <div class="mar-btm">-->
+<!--                                                    <a href="#" class="btn-link text-semibold media-heading box-inline">Bobby Marz</a>-->
+<!--                                                    <p class="text-muted text-sm"> 7 min ago</p>-->
+<!--                                                </div>-->
+<!--                                                <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>-->
+<!--                                                <div class="pad-ver">-->
+<!--                                                    <div class="btn-group">-->
+<!--                                                        <a class="btn btn-sm btn-default btn-hover-success active" href="#"><i class="fa fa-thumbs-up"></i> 45</a>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <hr>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                 </div>
                             </div>
+                            <!--===================================================-->
+                            <!-- End Newsfeed Content -->
                         </div>
-                        <!--===================================================-->
-                        <!-- End Newsfeed Content -->
                     </div>
                 </div>
             </div>
@@ -198,7 +197,10 @@
 <!--            </nav>-->
 <!--        </section>-->
 
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <hr>
+        푸터 삽입부
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
