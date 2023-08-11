@@ -1,0 +1,14 @@
+.sort li {
+    float: right;
+    list-style: none;
+    font-size: 14px;
+}
+
+.sort .sort-list {
+    padding: 5px;
+}
+
+.sort-list a {
+    text-decoration: none;
+    color: black;
+}
