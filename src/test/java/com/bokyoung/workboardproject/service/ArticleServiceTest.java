@@ -19,6 +19,7 @@ import org.springframework.data.domain.Pageable;
 
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.*;
@@ -161,6 +162,21 @@ class ArticleServiceTest {
 
         //then
         then(articleRepository).should().deleteById(articleId);
+    }
+
+    @DisplayName("해시태그를 조회하면, 유니크 해시태그 리스트를 반환한다")
+    @Test
+    void givenNothing_whenCalling_thenReturnsHashtags() {
+        // Given
+        List<String> expectedHashtags = List.of("#java", "#spring", "#boot");
+        given(articleRepository.findAllDistinctHashtags()).willReturn(expectedHashtags);
+
+        // When
+        List<String> actualHashtags = sut.getHashtags();
+
+        // Then
+        assertThat(actualHashtags).isEqualTo(expectedHashtags);
+        then(articleRepository).should().findAllDistinctHashtags();
     }
 
     private UserAccount createUserAccount() {
