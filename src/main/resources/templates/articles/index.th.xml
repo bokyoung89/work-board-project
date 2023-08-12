@@ -13,6 +13,15 @@
     </attr>
     <attr sel="#search-value" th:value="${param.searchValue}" />
 
+    <attr sel="#hashtags" th:remove="all-but-first">
+        <attr sel="div" th:each="hashtag : ${hashtags}">
+            <attr sel="a" th:text="${hashtag}" th:href="@{/articles(
+            searchType=${searchType.name},
+            searchValue=${#strings.replace(hashtag, '#', '')}
+        )}" />
+        </attr>
+    </attr>
+
     <attr sel="#sort" th:object="${articles}">
         <attr sel=".sort-list[0]/a" th:text="'최신 순'" th:href="@{/articles(
             page=${articles.number},
