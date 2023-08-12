@@ -49,8 +49,10 @@ class ArticleControllerTest {
     @Test
     public void 게시글_리스트__페이지_정상_호출() throws Exception {
         //given
+        List<String> hashtags = List.of("#java", "#spring", "#boot");
         given(articleService.searchArticles(eq(null), eq(null), any(Pageable.class))).willReturn(Page.empty());
         given(paginationService.getPaginationBarNumbers(anyInt(), anyInt())).willReturn(List.of(0,1,2,3,4));
+        given(articleService.getHashtags()).willReturn(List.of("#java", "#spring", "#boot"));
 
         //when&then
         mvc.perform(get("/articles"))
@@ -58,9 +60,11 @@ class ArticleControllerTest {
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("articles/index"))
                 .andExpect(model().attributeExists("articles"))
-                .andExpect(model().attributeExists("paginationBarNumbers"));
+                .andExpect(model().attributeExists("paginationBarNumbers"))
+                .andExpect(model().attribute("hashtags", hashtags));
         then(articleService).should().searchArticles(eq(null), eq(null), any(Pageable.class));
         then(paginationService).should().getPaginationBarNumbers(anyInt(),anyInt());
+        then(articleService).should().getHashtags();
     }
 
     @DisplayName("[view][GET] 게시글 리스트 (게시판) 페이지 - 검색어와 함께 호출")
@@ -119,6 +123,7 @@ class ArticleControllerTest {
     public void 게시글_상세_페이지_정상_호출() throws Exception {
         //given
         Long articleId = 1L;
+        SearchType searchType = SearchType.HASHTAG;
         given(articleService.getArticle(articleId)).willReturn(createArticleWithCommentDto());
 
         //when&then
@@ -127,7 +132,8 @@ class ArticleControllerTest {
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("articles/detail"))
                 .andExpect(model().attributeExists("article"))
-                .andExpect(model().attributeExists("articleComments"));
+                .andExpect(model().attributeExists("articleComments"))
+                .andExpect(model().attributeExists("searchType"));
         then(articleService).should().getArticle(articleId);
     }
 
@@ -142,19 +148,6 @@ class ArticleControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("articles/search"));
-    }
-
-    @Disabled("구현 중")
-    @DisplayName("[view][GET] 게시글 해시태그 검색 페이지 - 정상 호출")
-    @Test
-    public void 게시글_해시태그_검색_페이지_정상_호출() throws Exception {
-        //given
-
-        //when&then
-        mvc.perform(get("/articles/search-hashtag"))
-                .andExpect(status().isOk())
-                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-                .andExpect(view().name("articles/search-hashtag"));
     }
 
     private ArticleWithCommentsDto createArticleWithCommentDto() {
