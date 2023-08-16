@@ -19,11 +19,7 @@ import java.util.Objects;
 public class UserAccount extends AuditingFields{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Setter
-    @Column(nullable = false, length = 50)
+    @Column(length = 50)
     private String userId;
 
     @Setter
@@ -61,12 +57,12 @@ public class UserAccount extends AuditingFields{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserAccount that = (UserAccount) o;
-        return Objects.equals(id, that.id);
+        return Objects.equals(userId, that.userId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(userId);
     }
 }
 
