@@ -1,4 +1,4 @@
-package util;
+package com.bokyoung.workboardproject.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
