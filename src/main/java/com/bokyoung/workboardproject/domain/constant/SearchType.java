@@ -1,4 +1,4 @@
-package com.bokyoung.workboardproject.domain.type;
+package com.bokyoung.workboardproject.domain.constant;
 
 import lombok.Getter;
 
