@@ -52,161 +52,72 @@
                     </form>
                 </div>
 
-
+                <!-- comments start -->
                 <div class="panel">
                     <div class="panel-body">
-                        <textarea class="form-control" rows="2" placeholder="답변을 달아주세요."></textarea>
-                        <div class="mar-top clearfix">
-                            <button class="btn btn-sm btn-primary pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> 쓰기</button>
-                            <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
-                            <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
-                            <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a>
-                        </div>
+                        <form id="comment-form">
+                            <input type="hidden" class="article-id">
+                                <textarea class="form-control" id="comment-textbox" rows="2" required placeholder="답변을 달아주세요."></textarea>
+                            <div class="mar-top clearfix">
+                                <button class="btn btn-sm btn-primary pull-right" id="comment-submit" type="submit"><i class="fa fa-pencil fa-fw"></i> 쓰기</button>
+                                <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
+                                <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
+                                <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div id="article-comments">
                     <div class="panel">
                         <div class="panel-body">
-                            <!-- Newsfeed Content -->
-                            <!--===================================================-->
-                            <div class="media-block">
-                                <div class="media-body">
-                                    <div class="mar-btm">
-                                        <a href="#" class="btn-link text-semibold media-heading box-inline">Lisa D.</a>
-                                        <p class="text-muted text-sm"><time>11 min ago</time></p>
-                                    </div>
-                                    <p class="article-comment">consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                                    <div class="pad-ver">
-                                        <div class="btn-group">
-                                            <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i> 45</a>
+                            <form class="comment-form">
+                                <input type="hidden" class="article-id">
+                                <div class="row">
+                                    <div class="media-block col-md-10 col-lg-10">
+                                        <div class="media-body">
+                                            <div class="mar-btm">
+                                                <a href="#" class="btn-link text-semibold media-heading box-inline">Lisa D.</a>
+                                                <p class="text-muted text-sm"><time>11 min ago</time></p>
+                                            </div>
+                                            <p class="article-comment">consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                                            <div class="pad-ver">
+                                                <div class="btn-group">
+                                                    <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i> 45</a>
+                                                </div>
+                                                    <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
+                                            </div>
+    <!--                                    <div>-->
+    <!--                                        <div class="media-block">-->
+    <!--                                            <a class="media-left img-circle img-sm" href="#"></a>-->
+    <!--                                            <div class="media-body">-->
+    <!--                                                <div class="mar-btm">-->
+    <!--                                                    <a href="#" class="btn-link text-semibold media-heading box-inline">Bobby Marz</a>-->
+    <!--                                                    <p class="text-muted text-sm"> 7 min ago</p>-->
+    <!--                                                </div>-->
+    <!--                                                <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>-->
+    <!--                                                <div class="pad-ver">-->
+    <!--                                                    <div class="btn-group">-->
+    <!--                                                        <a class="btn btn-sm btn-default btn-hover-success active" href="#"><i class="fa fa-thumbs-up"></i> 45</a>-->
+    <!--                                                    </div>-->
+    <!--                                                </div>-->
+    <!--                                                <hr>-->
+    <!--                                            </div>-->
+    <!--                                        </div>-->
+    <!--                                    </div>-->
                                         </div>
-                                        <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
                                     </div>
-                                    <hr>
-
-<!--                                    &lt;!&ndash; Comments &ndash;&gt;-->
-<!--                                    <div>-->
-<!--                                        <div class="media-block">-->
-<!--                                            <a class="media-left img-circle img-sm" href="#"></a>-->
-<!--                                            <div class="media-body">-->
-<!--                                                <div class="mar-btm">-->
-<!--                                                    <a href="#" class="btn-link text-semibold media-heading box-inline">Bobby Marz</a>-->
-<!--                                                    <p class="text-muted text-sm"> 7 min ago</p>-->
-<!--                                                </div>-->
-<!--                                                <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>-->
-<!--                                                <div class="pad-ver">-->
-<!--                                                    <div class="btn-group">-->
-<!--                                                        <a class="btn btn-sm btn-default btn-hover-success active" href="#"><i class="fa fa-thumbs-up"></i> 45</a>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                                <hr>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
+                                    <div class="col-2 mb-3">
+                                        <button type="submit" class="btn btn-outline-danger" id="delete-comment-button">삭제</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <!--===================================================-->
-                            <!-- End Newsfeed Content -->
-                        </div>
-                    </div>
-                    <div class="panel">
-                        <div class="panel-body">
-                            <!-- Newsfeed Content -->
-                            <!--===================================================-->
-                            <div class="media-block">
-                                <div class="media-body">
-                                    <div class="mar-btm">
-                                        <a href="#" class="btn-link text-semibold media-heading box-inline">Lisa D.</a>
-                                        <p class="text-muted text-sm"> 11 min ago</p>
-                                    </div>
-                                    <p>consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                                    <div class="pad-ver">
-                                        <div class="btn-group">
-                                            <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i> 45</a>
-                                        </div>
-                                        <a class="btn btn-sm btn-default btn-hover-primary" href="#">Comment</a>
-                                    </div>
-                                    <hr>
-
-                                    <!-- Comments -->
-<!--                                    <div>-->
-<!--                                        <div class="media-block">-->
-<!--                                            <a class="media-left img-circle img-sm" href="#"></a>-->
-<!--                                            <div class="media-body">-->
-<!--                                                <div class="mar-btm">-->
-<!--                                                    <a href="#" class="btn-link text-semibold media-heading box-inline">Bobby Marz</a>-->
-<!--                                                    <p class="text-muted text-sm"> 7 min ago</p>-->
-<!--                                                </div>-->
-<!--                                                <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>-->
-<!--                                                <div class="pad-ver">-->
-<!--                                                    <div class="btn-group">-->
-<!--                                                        <a class="btn btn-sm btn-default btn-hover-success active" href="#"><i class="fa fa-thumbs-up"></i> 45</a>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                                <hr>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-                                </div>
-                            </div>
-                            <!--===================================================-->
-                            <!-- End Newsfeed Content -->
+                            </form>
                         </div>
                     </div>
                 </div>
+                <!-- comments End -->
             </div>
         </div>
     </div>
-<!--        <header>-->
-<!--            <h1>첫번째 글</h1>-->
-<!--        </header>-->
-
-<!--        <aside>-->
-<!--            <p>shin</p>-->
-<!--            <p><a href="sbk8689@gmail.com">sbk8689@gmail.com</a></p>-->
-<!--            <p><time datetime="2022-01-01T00:00:00">2022-02-02</time></p>-->
-<!--            <p>#java</p>-->
-<!--        </aside>-->
-
-<!--        <section>-->
-<!--            <p>본문</p>-->
-
-<!--            <div>-->
-<!--                <form>-->
-<!--                    <label for="articleComment" hidden>댓글</label>-->
-<!--                    <textarea id="articleComment" placeholder="댓글쓰기" rows="3"></textarea>-->
-<!--                    <button type="submit">쓰기</button>-->
-<!--                </form>-->
-
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        <div>-->
-<!--                            <time><small>2022-01-01</small></time>-->
-<!--                            <strong>shin</strong>-->
-<!--                            <p>-->
-<!--                                댓글입니다.-->
-<!--                                댓글입니다.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <div>-->
-<!--                            <time><small>2022-01-01</small></time>-->
-<!--                            <strong>shin</strong>-->
-<!--                            <p>-->
-<!--                                댓글입니다.-->
-<!--                                댓글입니다.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </div>-->
-
-<!--            <nav>-->
-<!--                <a href="#">이전 글</a>-->
-<!--                <a href="#">다음 글</a>-->
-<!--            </nav>-->
-<!--        </section>-->
 
     <footer id="footer">
         <hr>
