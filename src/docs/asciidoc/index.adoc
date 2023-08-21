@@ -1,0 +1,94 @@
+= 요리조리 커뮤니티 서비스 API 레퍼런스
+https://github.com/bokyoung89/work-board-project
+:doctype: article
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:sectlinks:
+
+[[Article-API]]
+== Article API
+
+[[게시글-리스트-조회]]
+=== 게시글 리스트 조회
+==== 설명
+조회한 데이터를 20건씩 JSON 형식으로 반환합니다.
+
+==== 요청 url
+include::{snippets}/articles/httpie-request.adoc[]
+
+==== 프로토콜
+HTTPS
+
+==== HTTP 메서드
+GET
+
+==== 응답
+응답에 성공하면 결괏값을 JSON 형식으로 반환합니다.
+include::{snippets}/articles/response-fields.adoc[]
+
+==== 응답 예
+include::{snippets}/articles/response-body.adoc[]
+
+---
+
+[[게시글-단건-조회]]
+=== 게시글 단건 조회
+==== 설명
+게시글 id를 파라미터로 전달하여 JSON 형식으로 반환합니다.
+
+==== 요청 url
+include::{snippets}/article/httpie-request.adoc[]
+
+==== 요청 파라미터
+include::{snippets}/article/path-parameters.adoc[]
+
+==== 프로토콜
+HTTPS
+
+==== HTTP 메서드
+GET
+
+==== 응답
+응답에 성공하면 결괏값을 JSON 형식으로 반환합니다.
+include::{snippets}/article/response-fields.adoc[]
+
+==== 응답 예
+include::{snippets}/article/response-body.adoc[]
+
+---
+
+[[ArticleComments-API]]
+== ArticleComments API
+
+[[댓글-리스트-조회]]
+=== 댓글 리스트 조회
+==== 설명
+게시글 id를 파라미터로 전달하여 JSON 형식으로 댓글 리스트를 반환합니다.
+
+==== 요청 url
+include::{snippets}/articleComments-of-article/httpie-request.adoc[]
+
+==== 요청 파라미터
+include::{snippets}/articleComments-of-article/path-parameters.adoc[]
+
+==== 프로토콜
+HTTPS
+
+==== HTTP 메서드
+GET
+
+==== 응답
+응답에 성공하면 결괏값을 JSON 형식으로 반환합니다.
+include::{snippets}/articleComments-of-article/response-fields.adoc[]
+
+==== 응답 예
+include::{snippets}/articleComments-of-article/response-body.adoc[]
+
+---
+
+
+
+
+
