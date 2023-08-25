@@ -1,4 +1,4 @@
-= 요리조리 커뮤니티 서비스 API 레퍼런스
+= 요리 커뮤니티 서비스 API 명세서
 https://github.com/bokyoung89/work-board-project
 :doctype: article
 :icons: font
@@ -7,84 +7,92 @@ https://github.com/bokyoung89/work-board-project
 :toclevels: 2
 :sectlinks:
 
-[[Article-API]]
-== Article API
+[[API-개요]]
+== API 개요
+- API 서비스명 : 요리 커뮤니티 서비스 API
+- 버전 : v1
+
+[[Articles-API]]
+== Articles API
 
 [[게시글-리스트-조회]]
 === 게시글 리스트 조회
-==== 설명
-조회한 데이터를 20건씩 JSON 형식으로 반환합니다.
+API 호출 시점으로 서버에 등록된 모든 게시물 목록을 Pagination을 적용하여 20건 씩 반환합니다.
 
-==== 요청 url
-include::{snippets}/articles/httpie-request.adoc[]
-
-==== 프로토콜
-HTTPS
-
-==== HTTP 메서드
+==== HTTP method
 GET
 
-==== 응답
-응답에 성공하면 결괏값을 JSON 형식으로 반환합니다.
-include::{snippets}/articles/response-fields.adoc[]
+==== Endpoint
+include::C:\Work\work-board-project\build\generated-snippets/articles/http-request.adoc[]
 
-==== 응답 예
-include::{snippets}/articles/response-body.adoc[]
+==== Request url
+include::C:\Work\work-board-project\build\generated-snippets/articles/httpie-request.adoc[]
+
+==== Response
+- Response Elements
+
+include::C:\Work\work-board-project\build\generated-snippets/articles/response-fields.adoc[]
+
+- Response Sample
+다음은 `page_size=20` 을 요청하여, Pagination을 통해 총 123개의 `total_elements` 를 7개의 페이지로 나눈 것 중 첫 번째 페이지를 조회한 예제입니다.
+include::C:\Work\work-board-project\build\generated-snippets/articles/response-body.adoc[]
 
 ---
 
 [[게시글-단건-조회]]
 === 게시글 단건 조회
-==== 설명
-게시글 id를 파라미터로 전달하여 JSON 형식으로 반환합니다.
+게시글 id를 parameter로 전달하여 게시글 정보를 반환합니다. 댓글, 사용자 정보는 `_links` 요소로 담아 반환합니다.
 
-==== 요청 url
-include::{snippets}/article/httpie-request.adoc[]
-
-==== 요청 파라미터
-include::{snippets}/article/path-parameters.adoc[]
-
-==== 프로토콜
-HTTPS
-
-==== HTTP 메서드
+==== HTTP method
 GET
 
-==== 응답
-응답에 성공하면 결괏값을 JSON 형식으로 반환합니다.
-include::{snippets}/article/response-fields.adoc[]
+==== Endpoint
+include::C:\Work\work-board-project\build\generated-snippets/article/http-request.adoc[]
 
-==== 응답 예
-include::{snippets}/article/response-body.adoc[]
+==== Request
+- Request url
+include::C:\Work\work-board-project\build\generated-snippets/article/httpie-request.adoc[]
 
----
+- Request parameter
+
+include::C:\Work\work-board-project\build\generated-snippets/article/path-parameters.adoc[]
+
+==== Response
+- Response Elements
+include::C:\Work\work-board-project\build\generated-snippets/article/response-fields.adoc[]
+
+==== Response sample
+include::C:\Work\work-board-project\build\generated-snippets/article/response-body.adoc[]
 
 [[ArticleComments-API]]
 == ArticleComments API
 
 [[댓글-리스트-조회]]
 === 댓글 리스트 조회
-==== 설명
 게시글 id를 파라미터로 전달하여 JSON 형식으로 댓글 리스트를 반환합니다.
 
-==== 요청 url
-include::{snippets}/articleComments-of-article/httpie-request.adoc[]
-
-==== 요청 파라미터
-include::{snippets}/articleComments-of-article/path-parameters.adoc[]
-
-==== 프로토콜
-HTTPS
-
-==== HTTP 메서드
+==== HTTP method
 GET
 
-==== 응답
-응답에 성공하면 결괏값을 JSON 형식으로 반환합니다.
-include::{snippets}/articleComments-of-article/response-fields.adoc[]
+==== Endpoint
+include::C:\Work\work-board-project\build\generated-snippets/articleComments-of-article/http-request.adoc[]
 
-==== 응답 예
-include::{snippets}/articleComments-of-article/response-body.adoc[]
+==== Request
+- Request url
+include::C:\Work\work-board-project\build\generated-snippets/articleComments-of-article/httpie-request.adoc[]
+
+- Request parameter
+
+include::C:\Work\work-board-project\build\generated-snippets/articleComments-of-article/path-parameters.adoc[]
+
+==== Response
+응답에 성공하면 결괏값을 JSON 형식으로 반환합니다.
+
+- Response Elements
+include::C:\Work\work-board-project\build\generated-snippets/articleComments-of-article/response-fields.adoc[]
+
+- Response sample
+include::C:\Work\work-board-project\build\generated-snippets/articleComments-of-article/response-body.adoc[]
 
 ---
 
