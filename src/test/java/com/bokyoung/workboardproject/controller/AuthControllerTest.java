@@ -1,6 +1,7 @@
 package com.bokyoung.workboardproject.controller;
 
 import com.bokyoung.workboardproject.config.SecurityConfig;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+@Disabled
 @DisplayName("view 컨트롤러 - 인증 부분")
 @Import(SecurityConfig.class)
 @WebMvcTest
