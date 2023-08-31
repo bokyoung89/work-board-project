@@ -18,9 +18,9 @@
                 <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
                     <img th:src="@{images/logo.png}" class="bi me-2" width="40" height="45" role="img" aria-label="Bootstrap" style="width: 100%"/>
                 </a>
-                <li><a href="#" class="nav-link px-2" style="font-weight: bold;font-size: 16px;color: #6d6b6b">홈</a></li>
-                <li><a href="#" class="nav-link px-2" style="font-weight: bold;font-size: 16px;color: #6d6b6b">레시피 공유해요</a></li>
-                <li><a href="#" class="nav-link px-2" style="font-weight: bold;font-size: 16px;color: #6d6b6b">레시피 문의해요</a></li>
+                <li><a id="home" href="#" class="nav-link px-2" style="font-weight: bold;font-size: 16px;color: #6d6b6b">홈</a></li>
+                <li><a id="recipe" href="#" class="nav-link px-2" style="font-weight: bold;font-size: 16px;color: #6d6b6b">레시피 공유해요</a></li>
+                <li><a id="counseling" href="#" class="nav-link px-2" style="font-weight: bold;font-size: 16px;color: #6d6b6b">레시피 문의해요</a></li>
             </ul>
 
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
@@ -29,13 +29,15 @@
 
             <div class="dropdown text-end">
                 <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                    <img src="https://github.com/mdo.png" alt="mdo" id="member" width="32" height="32" class="rounded-circle">
+                    <img src="/images/profile.png" alt="mdo" id="non-member" width="32" height="32" class="rounded-circle">
                 </a>
                 <ul class="dropdown-menu text-small">
-                    <li><a class="dropdown-item" href="#" style="font-weight: bold;font-size: 14px;color: #6d6b6b">프로필</a></li>
-                    <li><a class="dropdown-item" href="#" style="font-weight: bold;font-size: 14px;color: #6d6b6b">내가 쓴 글</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#" style="font-weight: bold;font-size: 14px;color: #6d6b6b">로그아웃</a></li>
+                    <li><a class="dropdown-item" id="username" href="#" style="font-weight: bold;font-size: 14px;color: #6d6b6b">username</a></li>
+                    <li><a class="dropdown-item" id="profile" href="#" style="font-weight: bold;font-size: 14px;color: #6d6b6b">프로필</a></li>
+<!--                    <li><hr class="dropdown-divider"></li>-->
+                    <li><a class="dropdown-item" id="login" href="#" style="font-weight: bold;font-size: 14px;color: #6d6b6b">로그인</a></li>
+                    <li><a class="dropdown-item" id="logout" href="#" style="font-weight: bold;font-size: 14px;color: #6d6b6b">로그아웃</a></li>
                 </ul>
             </div>
         </div>

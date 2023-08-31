@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<thlogic>
+    <attr sel="#home" th:href="@{/}" />
+    <attr sel="#recipe" th:href="@{/}" />
+    <attr sel="#counseling" th:href="@{/}" />
+    <attr sel="#member" sec:authorize="isAuthenticated()" th:src="@{https://github.com/mdo.png}" />
+    <attr sel="#non-member" sec:authorize="!isAuthenticated()" th:href="@{/images/profile.png}" />
+    <attr sel="#username" sec:authorize="isAuthenticated()" sec:authentication="name" />
+    <attr sel="#profile" sec:authorize="isAuthenticated()" th:href="@{/}" />
+    <attr sel="#login" sec:authorize="!isAuthenticated()" th:href="@{/login}" />
+    <attr sel="#logout" sec:authorize="isAuthenticated()" th:href="@{/logout}" />
+</thlogic>
